@@ -1,6 +1,15 @@
 import unittest
 from aims.cart import Cart
 from aims.dvd import DigitalVideoDisc
+import unittest
+from aims.dvd import DigitalVideoDisc
+from aims.search import search_by_title
+
+class TestSearch(unittest.TestCase):
+    def test_search_case_insensitive(self):
+        items = [DigitalVideoDisc("The Lion King", "Animation", cost=19.95)]
+        results = search_by_title(items, "lion")
+        self.assertEqual(len(results), 1)
 
 class TestCart(unittest.TestCase):
     def test_add_dvd_until_full(self):
