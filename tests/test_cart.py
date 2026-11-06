@@ -12,5 +12,14 @@ class TestCart(unittest.TestCase):
         overflow_dvd = DigitalVideoDisc("DVD 21", "Category", "Director", 90, 10.0)
         self.assertFalse(cart.add_dvd(overflow_dvd))
 
+        def test_total_cost_with_discount(self):
+            cart = Cart()
+            dvd = DigitalVideoDisc("DVD 1", "Category", "Director", 90, 100.0)
+            cart.add_dvd(dvd)
+            
+            self.assertEqual(cart.total_cost_with_discount(20), 80.0)
+            
+            with self.assertRaises(ValueError):
+                cart.total_cost_with_discount(150)
 if __name__ == "__main__":
     unittest.main()
