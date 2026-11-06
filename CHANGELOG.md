@@ -5,6 +5,8 @@ Tất cả các thay đổi đáng chú ý của dự án AIMS-mini sẽ đượ
 và dự án tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Tính năng sắp xếp giỏ hàng theo tiêu đề (`sort_by_title`) và theo giá (`sort_by_cost`).
 
 ## [1.0.0] - 2026-11-07
 ### Added
